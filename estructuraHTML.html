@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>CatPhotoApp</h1>
+        <!--un elemento section, para separar el contenido del contenido que añadiremos después.-->
+        <section>
+            <h2>Cat Photos</h2>
+            <!-- Añade un atributo target con el valor _blank en la etiqueta de apertura, 
+            del elemento anchor (a) para que el enlace abra en una nueva pestaña. -->
+            <p>See more cat photos in our gallery.</p>
+            <img src="imagenes/luna.PNG" alt="Esta es prima hermana de luna">
+            <a href="https://www.linkedin.com/home" target="_blank">Trabajo</a>
+        </section>
+
+        <section>
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <!--El elemento figure representa contenido independiente y te permitirá asociar una imagen a una descripción.-->
+            <figure><img src="imagenes/youtube.PNG" alt="Vagancia">
+                <figcaption>Aqui puedes <em>estudiar</em> o vaguiar</figcaption>
+                <h3>Lo que hay que aprender</h3>
+                <ol>
+                    <li>Node</li>
+                    <li>JS</li>
+                    <li>Express</li>
+                </ol>
+            </figure>
+
+            <figure><img src="imagenes/combo.PNG" alt="Tecnologias">
+                <figcaption>Tecnologias Proyecto</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Captura Datos</h2>
+            <!--El atributo action indica, dónde deben enviarse los datos del formulario. Por ejemplo, 
+                <form action="/submit-url"></form> le dice al navegador que los datos del formulario deben 
+                ser enviados a la ruta /submit-url.-->
+            <form>
+                <input type="text" name="email" placeholder="Digite su email">
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
