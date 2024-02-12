@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documento de Prueba Claudia</title>
 </head>
 
 <body>
@@ -49,11 +49,61 @@
                 <form action="/submit-url"></form> le dice al navegador que los datos del formulario deben 
                 ser enviados a la ruta /submit-url.-->
             <form>
-                <input type="text" name="email" placeholder="Digite su email">
+                <input type="text" name="email" placeholder="Digite su email" required>
+                <!--El comportamiento predeterminado de un botón sin atributos en un formulario es enviar 
+                    la información a la ubicación especificada en el atributo action del formulario.
+                El botón que has agregado enviará el formulario por defecto. Sin embargo, confiar en el comportamiento 
+                por defecto puede causar confusión. Agrega un atributo type con el valor submit al button para dejar claro
+                 que es un botón de envío.-->
+                <button type="submit">submit</button>
+                <!--El atributo id se utiliza para identificar elementos HTML específicos. Cada atributo 
+                    id debe tener un valor único, diferente a los demás valores id de la página. Puedes observar 
+                    que ambos elementos radio button pueden ser seleccionados al mismo tiempo. Para hacer que al 
+                    seleccionar un radio button, el otro sé deseleccione automáticamente, ambos botones deben tener 
+                    un atributo name con el mismo valor. Si seleccionas el radio button Indoor y envías el formulario, los datos del radio button se 
+                    basarán en sus atributos name y value. Ya que tus elementos radio button no tienen el atributo 
+                    value, los datos del formulario se verán así indoor-outdoor=on, lo cual no es útil cuando tienes
+                     múltiples radio button. Añade un atributo value a ambos radio button. Por conveniencia, a los 
+                     atributos value dales el mismo valor del atributo id de cada radio button. El elemento fieldset 
+                     se utiliza para agrupar elementos input y label relacionados dentro de un formulario web. 
+                     Los elementos fieldset son elementos de nivel de bloque, lo que significa que aparecen en una 
+                     nueva línea.-->
+
+                <fieldset>
+                    <!--Para hacer que un checkbox o un radio button este seleccionado por defecto, necesitas añadir el 
+                    atributo checked. No hay necesidad de agregarle un valor al atributo checked. Simplemente necesitas
+                     añadir la palabra checked al elemento input, asegurándote de que hay espacios entre ella y los 
+                     otros atributos.-->
+                    <legend>Profesion:</legend><label><input type="radio" id="indoor" name="profesion" value="indoor"
+                            checked>Administrador
+                        Industrial</label>
+                    <label><input id="outdoor" type="radio" name="profesion" value="outdoor"> Ingenieria de
+                        Sistemas</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Estado Civil:</legend>
+                    <!--Hay otra manera de asociar un texto con el elemento input. Puedes anidar un texto dentro de un
+                         elemento label y añadirle un atributo for con el mismo valor del atributo id del elemento input.
+                        Al igual que los radio button, los datos de formulario de un checkbox se basan en los atributos 
+                        name / value. Mientras que el atributo value es opcional, es una buena práctica incluirlo en 
+                        cualquier checkbox o radio button de una página. Añade un atributo value a los dos checkbox. 
+                        Por conveniencia, a los atributos value dales el mismo valor del atributo id de cada checkbox.-->
+                    <input type="checkbox" id="divorsiada" name="estado_civil" value="divorsiada" checked><label
+                        for="divorsiada">Divorsiada</label>
+                    <input type="checkbox" id="soltera" name="estado_civil" value="soltera"><label
+                        for="soltera">Soltera</label>
+                    <input type="checkbox" id="casada" name="estado_civil" value="casada"><label
+                        for="casada">Casada</label>
+                </fieldset>
             </form>
         </section>
     </main>
-
+    <!--Ahora añadirás un pie de página con el elemento footer.-->
+    <footer>
+        <p>No Copyright
+            <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+        </p>
+    </footer>
 </body>
 
 </html>
