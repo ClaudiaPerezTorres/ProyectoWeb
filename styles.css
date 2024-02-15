@@ -1,0 +1,65 @@
+h1, h2, p {
+    text-align: center;
+  }
+
+.captura_datos{
+    width: 80%;
+    background-image: url(imagenes/captura_datos.PNG);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    /*El ancho actual del menú siempre tomará un 80% del ancho del elemento body. En una pantalla*/
+    /*muy amplia, los items apareceran lejos de sus precios. Añade una propiedad max-width (ancho-máximo)*/
+    /* a la clase menu con un valor de 500px para prevenir que se expanda más de lo necesario.*/
+    max-width: 500px;
+    font-family: sans-serif;
+}
+
+.captura_datos, h1,h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.articulo{
+    text-align: left;
+    width: 75%;
+}
+
+.precio{
+    text-align: right;
+    width: 25%;
+}
+
+/*Puedes darle estilo a todos los elementos p que estén anidados en*/
+/* cualquiera de los elementos con la clase item de la siguiente forma:*/
+/*los elementos de inline-block solo ocupan el ancho de su contenido. Para extenderlos, añade una propiedad width*/
+ .item p{
+    display: inline-block;
+    width: 49%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+ }
+
+ hr{
+    height: 3px;
+    background-color: brown;
+    border-color: brown;
+ }
+
+ /*FOOTER*/
+ 
+footer {
+    font-size: 14px;
+  }
+/*Para cambiar las propiedades de un enlace cuando el enlace ya ha sido visitado utilizas un pseudo-selector*/
+/*el cual luce así a:visited { propertyName: propertyValue; }. Cambia el color del enlace del footer Visit */
+/*our website para que sea gris (grey) cuando un usuario ya ha visitado el enlace.*/
+
+a{
+    color:black;
+  }
+
+  a:visited{
+    color:grey;
+  }
