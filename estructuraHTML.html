@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento de Prueba Claudia</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Para que el estilo de la página se vea similar tanto en móvil como en ordenador de escritorio 
+        o portátil, necesitas añadir un elemento meta con un atributo especial content. Añade lo siguiente 
+        dentro del elemento head:-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
+
 
 <body>
     <main>
@@ -43,20 +50,22 @@
                 <figcaption>Tecnologias Proyecto</figcaption>
             </figure>
         </section>
+        <hr>
         <section>
-            <h2>Captura Datos</h2>
-            <!--El atributo action indica, dónde deben enviarse los datos del formulario. Por ejemplo, 
+            <div class="captura_datos">
+                <h2>Captura Datos</h2>
+                <!--El atributo action indica, dónde deben enviarse los datos del formulario. Por ejemplo, 
                 <form action="/submit-url"></form> le dice al navegador que los datos del formulario deben 
                 ser enviados a la ruta /submit-url.-->
-            <form>
-                <input type="text" name="email" placeholder="Digite su email" required>
-                <!--El comportamiento predeterminado de un botón sin atributos en un formulario es enviar 
+                <form>
+                    <input type="text" name="email" placeholder="Digite su email" required>
+                    <!--El comportamiento predeterminado de un botón sin atributos en un formulario es enviar 
                     la información a la ubicación especificada en el atributo action del formulario.
                 El botón que has agregado enviará el formulario por defecto. Sin embargo, confiar en el comportamiento 
                 por defecto puede causar confusión. Agrega un atributo type con el valor submit al button para dejar claro
                  que es un botón de envío.-->
-                <button type="submit">submit</button>
-                <!--El atributo id se utiliza para identificar elementos HTML específicos. Cada atributo 
+                    <button type="submit">submit</button>
+                    <!--El atributo id se utiliza para identificar elementos HTML específicos. Cada atributo 
                     id debe tener un valor único, diferente a los demás valores id de la página. Puedes observar 
                     que ambos elementos radio button pueden ser seleccionados al mismo tiempo. Para hacer que al 
                     seleccionar un radio button, el otro sé deseleccione automáticamente, ambos botones deben tener 
@@ -69,33 +78,47 @@
                      Los elementos fieldset son elementos de nivel de bloque, lo que significa que aparecen en una 
                      nueva línea.-->
 
-                <fieldset>
-                    <!--Para hacer que un checkbox o un radio button este seleccionado por defecto, necesitas añadir el 
+                    <fieldset>
+                        <!--Para hacer que un checkbox o un radio button este seleccionado por defecto, necesitas añadir el 
                     atributo checked. No hay necesidad de agregarle un valor al atributo checked. Simplemente necesitas
                      añadir la palabra checked al elemento input, asegurándote de que hay espacios entre ella y los 
                      otros atributos.-->
-                    <legend>Profesion:</legend><label><input type="radio" id="indoor" name="profesion" value="indoor"
-                            checked>Administrador
-                        Industrial</label>
-                    <label><input id="outdoor" type="radio" name="profesion" value="outdoor"> Ingenieria de
-                        Sistemas</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Estado Civil:</legend>
-                    <!--Hay otra manera de asociar un texto con el elemento input. Puedes anidar un texto dentro de un
+                        <legend>Profesion:</legend><label><input type="radio" id="indoor" name="profesion"
+                                value="indoor" checked>Administrador
+                            Industrial</label>
+                        <label><input id="outdoor" type="radio" name="profesion" value="outdoor"> Ingenieria de
+                            Sistemas</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Estado Civil:</legend>
+                        <!--Hay otra manera de asociar un texto con el elemento input. Puedes anidar un texto dentro de un
                          elemento label y añadirle un atributo for con el mismo valor del atributo id del elemento input.
                         Al igual que los radio button, los datos de formulario de un checkbox se basan en los atributos 
                         name / value. Mientras que el atributo value es opcional, es una buena práctica incluirlo en 
                         cualquier checkbox o radio button de una página. Añade un atributo value a los dos checkbox. 
                         Por conveniencia, a los atributos value dales el mismo valor del atributo id de cada checkbox.-->
-                    <input type="checkbox" id="divorsiada" name="estado_civil" value="divorsiada" checked><label
-                        for="divorsiada">Divorsiada</label>
-                    <input type="checkbox" id="soltera" name="estado_civil" value="soltera"><label
-                        for="soltera">Soltera</label>
-                    <input type="checkbox" id="casada" name="estado_civil" value="casada"><label
-                        for="casada">Casada</label>
-                </fieldset>
-            </form>
+                        <input type="checkbox" id="divorsiada" name="estado_civil" value="divorsiada" checked><label
+                            for="divorsiada">Divorsiada</label>
+                        <input type="checkbox" id="soltera" name="estado_civil" value="soltera"><label
+                            for="soltera">Soltera</label>
+                        <input type="checkbox" id="casada" name="estado_civil" value="casada"><label
+                            for="casada">Casada</label>
+                    </fieldset>
+                </form>
+                <!--Los elementos article contienen múltiples elementos que tienen información relacionada-->
+                <article class="item">
+                    <p class="articulo">Camisas</p><p class="precio">60.000.oo</p>
+                </article>
+                <article class="item">
+                    <p class="articulo">Pantalones</p><p class="precio">80.000.oo</p>
+                </article>
+                <article class="item">
+                    <p class="articulo">Zapatos</p><p class="precio">150.000.oo</p>
+                </article>
+                <article class="item">
+                    <p class="articulo">Turbante</p><p class="precio">30.000.oo</p>
+                </article>
+            </div>
         </section>
     </main>
     <!--Ahora añadirás un pie de página con el elemento footer.-->
