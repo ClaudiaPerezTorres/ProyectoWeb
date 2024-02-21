@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <!--El atributo method especifica cómo enviar datos de formulario a la dirección URL especificada 
+    en el atributo action. Los datos del formulario se pueden enviar a través de una solicitud GET
+    como parámetros de URL (con method="get") o mediante una solicitud POST como datos en el cuerpo 
+    de la solicitud (con method="post").-->
+    <form action="https://register-demo.freecodecamp.org" method="post">
+        <!--Como el formulario tiene tres secciones distintas, agrega tres elementos fieldset dentro del elemento form.-->
+        <fieldset>
+            <label for="first-name">Enter Your First Name: <input id="first-name" type="text" required
+                    name="nombre" /></label>
+            <label for="last-name">Enter Your Last Name: <input id="last-name" type="text" required
+                    name="apellido" /></label>
+            <label for="email">Enter Your Email: <input id="email" type="email" required name="email" /></label>
+            <!--Agrega validación personalizada al elemento input de contraseña, agregando un atributo minlength 
+        con un valor de 8. De este modo se evita que se envíen entradas de menos de 8 caracteres. Con el type="password"
+        puedes usar el atributo pattern para definir una expresión regular que la contraseña debe coincidir para 
+        ser considerada válida. Agrega un atributo pattern al elemento input de contraseña para requerir que 
+        la entrada coincida con: [a-z0-5]{8,} Lo anterior es una expresión regular que coincide con ocho 
+        o más letras minúsculas o los dígitos del 0 al 5. Luego, elimina el atributo minlength, y pruébalo.-->
+            <label for="new-password">Create a New Password: <input id="new-password" type="password"
+                    pattern="[a-z0-5]{8,}" name="password" /></label>
+        </fieldset>
+        <fieldset>
+            <!--Para relacionar los inputs de radio, dales el mismo atributo name con un valor de account-type.
+         Ahora, no es posible seleccionar ambos inputs de radio al mismo tiempo.-->
+            <legend>Account type (required)</legend>
+            <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline"
+                    checked /> Personal</label>
+            <label for="business-account"><input id="business-account" type="radio" name="account-type"
+                    class="inline" /> Business</label>
+        </fieldset>
+        <fieldset>
+            <!--Pasando al final fieldset. ¿Qué pasa si quisieras permitir que un usuario suba una foto de perfil?
+    Bueno, el input con tipo file permite eso. Agrega un label con el texto Upload a profile picture: y anida
+     un input aceptando la carga de un archivo.-->
+            <label for="profile-picture"><input type="file" id="profile-picture" name="foto">Upload a profile
+                picture:</label>
+            <label for="age">Input your age (years): <input type="number" min="13" max="120" id="age"
+                    name="edad"></label>
+            <label for="referrer">Como nos Conocio?
+                <select id="referrer" name="referrer">
+                    <option value="">(select one)</option>
+                    <option value="1">freeCodeCamp News</option>
+                    <option value="2">freeCodeCamp YouTube Channel</option>
+                    <option value="3">freeCodeCamp Forum</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+        </fieldset>
+        <label for="bio">Proporcione una biografía:<textarea id="bio" rows="3" cols="30"
+                placeholder="Me gusta codificar en la playa.." name="bio"></textarea></label>
+        <label for="terms-and-conditions" ><input type="checkbox" required id="terms-and-conditions" name="condiciones" class="inline">I
+            accept the
+            <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
